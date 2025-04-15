@@ -180,6 +180,53 @@ section {
     color: var(--secondary-color);
 }
 
+/* AI 에디터 섹션 */
+.editor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.editor-card {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.editor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.editor-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--light-bg);
+    padding-bottom: 0.5rem;
+}
+
+.editor-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.editor-card ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.editor-card ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .header-container {
@@ -203,6 +250,14 @@ section {
 
     section {
         padding: 4rem 1rem;
+    }
+
+    .editor-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .editor-card {
+        padding: 1.5rem;
     }
 }
 
